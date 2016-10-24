@@ -4,6 +4,7 @@
 		<title></title>
 	</head>
 	<body>
+		<p>Here is new change from Will</p>
 		<h1>Index</h1>
 		<h3>New State</h3>
 		<form action="{% url 'create' %}" method="POST">
@@ -21,7 +22,7 @@
 		<form action="{% url 'create_city' %}" method="POST">
 			{% csrf_token %}
 			<p>Name: <input type="text" name="name"></p>
-			<p>State: 
+			<p>State:
 			<select name="state_id">
 				{% for state in states %}
 				<option value="{{state.id}}">{{state.name}}</option>
